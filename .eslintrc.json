@@ -1,12 +1,21 @@
 {
-    "extends": "standard-with-typescript",
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {
-        
-       
-        
-    }
-
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-console": "warn",
+    "@typescript-eslint/no-floating-promises": "off", // To pop an error when Promises are called without await.
+    "react/prop-types": "off"
+  }
 }
