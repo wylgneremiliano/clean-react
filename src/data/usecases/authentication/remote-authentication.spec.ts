@@ -45,7 +45,7 @@ describe('RemoteAuthentication', () => {
     const promice = sut.auth(mockAuthentication())
     await expect(promice).rejects.toThrow(new InvalidCredentialsError())
   })
-  test('Should trhrow UnexpectedErro if HttpPostClient returns 400', async () => {
+  test('Should trhrow UnexpectedError if HttpPostClient returns 400', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
       statusCode: HttpStatusCode.badRequest,
@@ -53,7 +53,7 @@ describe('RemoteAuthentication', () => {
     const promice = sut.auth(mockAuthentication())
     await expect(promice).rejects.toThrow(new UnexpectedError())
   })
-  test('Should trhrow UnexpectedErro if HttpPostClient returns 500', async () => {
+  test('Should trhrow UnexpectedError if HttpPostClient returns 500', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
       statusCode: HttpStatusCode.serverError,
@@ -61,7 +61,7 @@ describe('RemoteAuthentication', () => {
     const promice = sut.auth(mockAuthentication())
     await expect(promice).rejects.toThrow(new UnexpectedError())
   })
-  test('Should throw UnexpectedErro if HttpPostClient returns 404', async () => {
+  test('Should throw UnexpectedError if HttpPostClient returns 404', async () => {
     const { sut, httpPostClientSpy } = makeSut()
     httpPostClientSpy.response = {
       statusCode: HttpStatusCode.notFound,
