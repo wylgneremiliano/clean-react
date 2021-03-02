@@ -16,6 +16,7 @@
     "@typescript-eslint/no-unused-vars": "off",
     "no-console": "warn",
     "@typescript-eslint/no-floating-promises": "off", // To pop an error when Promises are called without await.
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "@typescript-eslint/ban-types": "off"
   }
 }
